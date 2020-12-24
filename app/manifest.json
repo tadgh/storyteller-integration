@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Storyteller",
+    "description": "Integrates discord bot into clocktower application",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "Connect"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://clocktower.online/*"],
+            "js": ["scripts.js"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage"
+
+    ]
+}
