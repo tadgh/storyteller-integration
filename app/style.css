@@ -1,0 +1,46 @@
+#townsquare>.storyteller-discord {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    border: 3px solid #000;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,.5));
+    transform-origin: bottom left;
+    transform: scale(1);
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    z-index: 50;
+}
+
+#townsquare>.storyteller-discord h3 {
+    margin: 5px 1vh 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#townsquare>.storyteller-discord ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 0 10px #000;
+    border: 3px solid #000;
+    border-radius: 10px 0 10px 10px;
+}
+
+#townsquare>.storyteller-discord ul li {
+    padding: 2px 5px;
+    color: #fff;
+    text-align: left;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 30px;
+    cursor: pointer;
+}

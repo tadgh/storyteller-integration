@@ -1,16 +1,25 @@
-function message(val){
+function message(val) {
     document.getElementById("message").innerText = "Saved!";
-  }
-  
+}
 
+document.getElementById('save-button').addEventListener("click", saveMe);
+const urlField = document.getElementById("url-input")
+const tokenField = document.getElementById("api-input")
 
-
-saveButton = document.getElementById('save-button').addEventListener("click", saveMe);
 function saveMe() {
-    bot_url = document.getElementById("url-input").value
-    token = document.getElementById("api-input").value
+    bot_url = urlField.value
+    token = tokenField.value
     console.log("bot url is" + bot_url);
     console.log("Api token is: " + token);
-    chrome.storage.local.set({'boturl': bot_url}, function() {message('Settings saved');});
-    chrome.storage.local.set({'bottoken': token}, function() {message('Settings saved');});
+    chrome.storage.sync.set({'boturl': bot_url}, () => message('Settings saved'));
+    chrome.storage.sync.set({'bottoken': token}, () => message('Settings saved'));
 }
+
+function load() {
+    chrome.storage.sync.get(['boturl', 'bottoken'], data => {
+        urlField.value = data.boturl;
+        tokenField.value = data.bottoken;
+    });
+}
+
+load();
