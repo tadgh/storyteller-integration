@@ -3,11 +3,19 @@ const parentContainerId = "townsquare";
 const buttons = [
     {
         "text": "Sleep",
-        "action": "/test"
+        "action": "/go_to_sleep"
     },
     {
         "text": "Wake Up",
-        "action": "/test2"
+        "action": "/wake_up"
+    },
+    {
+        "text": "Wake Up Gently",
+        action: "/wake_up_gently"
+    },
+    {
+        "text": "Toggle Clockhand",
+        "action": "/clockhand"
     }
 ];
 
